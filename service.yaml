@@ -5,7 +5,7 @@ metadata:
   labels:
     app: user-manager-client
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: user-manager-client
   ports:
