@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-manager-client
+  labels:
+    app: user-manager-client
+spec:
+  type: LoadBalancer
+  selector:
+    app: user-manager-client
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5173
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-manager-server
+  labels:
+    app: user-manager-server
+spec:
+  type: ClusterIP
+  selector:
+    app: user-manager-server
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+
+ 
