@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: user-manager-client
-          image: pooja17122/user-manager-client:8b97516c
+          image: pooja17122/user-manager-client:6830c6da
           ports:
             - containerPort: 80
           resources:
@@ -45,7 +45,7 @@ spec:
     spec:
       containers:
         - name: user-manager-server
-          image: pooja17122/user-manager-server:8b97516c
+          image: pooja17122/user-manager-server:6830c6da
           ports:
             - containerPort: 8000
           resources:
