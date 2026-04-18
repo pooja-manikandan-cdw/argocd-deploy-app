@@ -48,6 +48,9 @@ spec:
           image: pooja17122/user-manager-server:6830c6da
           ports:
             - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              value: "sqlite:////data/users.db"
           resources:
             requests:
               cpu: "100m"
@@ -57,8 +60,7 @@ spec:
               memory: "256Mi"
           volumeMounts:
             - name: db-storage
-              mountPath: /app/users.db
-              subPath: users.db
+              mountPath: /data
       volumes:
         - name: db-storage
           persistentVolumeClaim:
