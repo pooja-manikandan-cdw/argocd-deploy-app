@@ -18,7 +18,7 @@ spec:
         - name: user-manager-client
           image: pooja17122/user-manager-client:1751e846
           ports:
-            - containerPort: 5173
+            - containerPort: 80
           resources:
             requests:
               cpu: "100m"
